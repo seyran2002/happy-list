@@ -1,0 +1,231 @@
+.form-base,
+.underForm {
+  overflow: hidden;
+  max-width: 500px;
+  margin: auto;
+}
+
+.underForm {
+  margin-top: 24px;
+}
+
+.icon {
+  position: absolute;
+  right: 20px;
+}
+
+.icon path,
+.addEvent path {
+  color: #fff;
+}
+
+.auth-form,
+.event-edit-form {
+  & > form {
+    & > .form-base {
+      margin-bottom: 1px;
+
+      & > .form-label-group {
+        margin-bottom: 9px;
+
+        & > input[type='text'],
+        input[type='password'] {
+          padding: 0 !important;
+          color: $text-main-color;
+          font-size: $font-size-16;
+          border-bottom: 1px solid $text-violet;
+        }
+
+        & > input[aria-invalid='false'] + label {
+          top: 21px;
+          left: 0;
+          padding-right: 0;
+          color: rgba($text-main-color, 0.5);
+        }
+
+        & > input[aria-invalid='true'] {
+          border-bottom: 1px solid $base-red;
+        }
+
+        & > input[aria-invalid='true'] + label {
+          top: 21px;
+          left: 0;
+          padding-right: 0;
+          color: $base-red !important;
+        }
+
+        & > label {
+          left: 0;
+          padding-right: 0;
+          font-size: $font-size-16;
+        }
+
+        input:focus + label {
+          top: 21px;
+          margin-bottom: 2px;
+          font-size: $font-size-12;
+          line-height: 15px;
+        }
+      }
+
+      & > .not-empty > label {
+        left: 0;
+        padding-right: 0;
+        font-size: $font-size-12;
+        line-height: 15px;
+      }
+
+      .time-picker-input-container input[aria-invalid='false'] + label {
+        left: 0;
+      }
+
+      .add-present-img-btn {
+        width: 100%;
+        max-width: 100%;
+        height: 44px;
+        margin-bottom: 18px;
+        line-height: 18px;
+        border-radius: 16px;
+      }
+    }
+
+    .underForm {
+      &-forget-password {
+        text-align: right;
+        margin-bottom: 24px;
+
+        & > button {
+          all: unset;
+          color: rgba($text-main-color, 0.5);
+          font-size: $font-size-12;
+          line-height: 15px;
+          cursor: pointer;
+        }
+      }
+
+      &-form-checkboxes {
+        margin-bottom: 38px;
+        font-size: $font-size-12;
+        line-height: 15px;
+        text-align: left;
+
+        @media screen and (max-width: 767px) {
+          margin-bottom: 34px;
+        }
+
+        label {
+          color: $text-main-color;
+          margin-bottom: 0;
+        }
+
+        a {
+          color: rgba($text-main-color, 0.5);
+          font-size: $font-size-12;
+          line-height: 15px;
+          cursor: pointer;
+        }
+      }
+
+      &-social-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 48px;
+
+        &--facebook {
+          background-color: $facebook-blue;
+
+          & > svg {
+            path {
+              color: $bg-white;
+            }
+          }
+        }
+
+        &--google {
+          background-color: $google-red;
+
+          @media screen and (max-width: 767px) {
+            margin-right: 7px;
+          }
+
+          & > svg {
+            path {
+              color: $bg-white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#forgotPassword {
+  .form-base {
+    & > div:first-child {
+      h1 {
+        margin-bottom: 16px;
+        color: $text-violet;
+        font-size: $font-size-32;
+        line-height: 40px;
+        font-weight: $bold;
+      }
+    }
+
+    & > form {
+      & > .form-label-group {
+        margin-bottom: 9px;
+
+        & > input[type='text'],
+        input[type='password'] {
+          padding: 0 !important;
+          color: $text-main-color;
+          font-size: $font-size-16;
+          border-bottom: 1px solid $text-violet;
+        }
+
+        & > input[aria-invalid='false'] + label {
+          top: 21px;
+          left: 0;
+          padding-right: 0;
+          color: rgba($text-main-color, 0.5);
+        }
+
+        & > input[aria-invalid='true'] {
+          border-bottom: 1px solid $base-red;
+        }
+
+        & > input[aria-invalid='true'] + label {
+          top: 21px;
+          left: 0;
+          padding-right: 0;
+          color: $base-red !important;
+        }
+
+        & > label {
+          left: 0;
+          padding-right: 0;
+          font-size: $font-size-16;
+        }
+
+        input:focus + label {
+          top: 21px;
+          margin-bottom: 2px;
+          font-size: $font-size-12;
+          line-height: 15px;
+        }
+      }
+
+      & > .not-empty > label {
+        left: 0;
+        padding-right: 0;
+        font-size: $font-size-12;
+        line-height: 15px;
+      }
+    }
+
+    p {
+      margin-top: 24px;
+    }
+  }
+}

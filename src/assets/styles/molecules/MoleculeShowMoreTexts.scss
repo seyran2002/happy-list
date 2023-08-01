@@ -1,0 +1,20 @@
+.hg-event-description-content {
+  grid-column: span 2;
+  .hg-event-description {
+    min-height: 21px;
+  }
+  .dots {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .hg-hide-show-content {
+    width: 100%;
+    text-align: right;
+    .hg-hide-show {
+      cursor: pointer;
+    }
+  }
+}

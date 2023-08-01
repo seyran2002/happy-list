@@ -1,0 +1,43 @@
+@import '../vars/colors.scss';
+
+.footer {
+  padding-bottom: 20px;
+
+  .logo {
+    margin-top: 32px;
+  }
+}
+
+.footer-line {
+  width: 100%;
+  opacity: 0.29;
+  border: 1px solid $text-main-color;
+  margin: 20px 0;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+
+  .ml-28 {
+    margin-left: 28px;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer {
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 370px) {
+  .footer {
+    p {
+      font-size: 12px;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.round {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 2px 6px 0 rgb(0 0 0 / 39%);
+  &.round-blue {
+    background: #4b85d1;
+  }
+  .icon-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+  }
+}
+
+@media (max-width: 1200px) {
+  .round {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 900px) {
+  .round {
+    width: 30px;
+    height: 30px;
+  }
+}

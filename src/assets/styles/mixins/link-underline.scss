@@ -1,0 +1,24 @@
+@import '../vars/colors.scss';
+
+@mixin link-underline($animation-duration: 0.15s) {
+  width: 65%;
+  height: 4px;
+  display: block;
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  background-color: $active-color;
+  border-radius: 5px;
+  animation-name: linkLine;
+  animation-duration: $animation-duration;
+}
+
+@keyframes linkLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: 65%;
+  }
+}

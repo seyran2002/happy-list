@@ -1,0 +1,132 @@
+@import '../vars/colors.scss';
+
+.active-header {
+  .header {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 99;
+    position: fixed;
+    height: 60px !important;
+    background: #fff !important;
+    box-shadow: 1px 0 8px #6159a9;
+    transition: cubic-bezier(0, 0.93, 0, 0.95) 1s;
+
+    .header-main {
+      margin: 0;
+      padding: 0;
+      max-width: 1500px;
+      -webkit-animation: bounce-logo 1s;
+      animation: bounce-logo 1s;
+
+      .header-logo {
+        a {
+          padding: 5px 0;
+          margin: 0;
+        }
+
+        img {
+          animation: rotate 1.5s;
+          height: 50px;
+        }
+      }
+    }
+  }
+}
+
+.background-edit-profile-page {
+  .header {
+    background: unset;
+  }
+  .size.mt-102 {
+    margin-top: 0;
+  }
+}
+
+.header {
+  background: $bg-white;
+  position: relative;
+
+  .size {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 80px);
+    overflow: unset;
+  }
+}
+
+.header-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  position: relative;
+
+  .header-links {
+    display: flex;
+    align-items: center;
+
+    .profile-pic {
+      border-radius: 50%;
+    }
+  }
+
+  .select-button {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+button.burger-menu-icon {
+  padding: 0;
+  border: none;
+  background: none;
+  position: absolute;
+  right: 0px;
+  display: none;
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.home > .mt-170 {
+  margin-top: 170px;
+}
+
+@media (max-width: 760px) {
+  .header-logo {
+    img {
+      width: 92px;
+    }
+  }
+  .header-main {
+    .header-links {
+      display: none;
+    }
+
+    .burger-menu-icon {
+      cursor: pointer;
+      display: block;
+    }
+  }
+}
+
+.mobile-menu-fade-enter-active {
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.mobile-menu-fade-leave-active {
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-fade-enter,
+.mobile-menu-fade-leave-to {
+  transform: translateX(10px);
+  opacity: 0;
+}

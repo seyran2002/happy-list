@@ -1,0 +1,9 @@
+@mixin btn-mixin {
+  color: $bg-white;
+  font-size: $font-size-14;
+  font-weight: $bold;
+  line-height: 18px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

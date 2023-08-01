@@ -1,0 +1,40 @@
+fieldset {
+  position: relative;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  z-index: 2;
+
+  &.create-event--wrapper-info-form-block---form-input {
+    margin-bottom: 24px;
+    max-width: 312px;
+  }
+
+  &.form-label-group {
+    input[type='text'] {
+      padding: 0 !important;
+      color: #11064a;
+      font-size: 14px;
+      border-bottom: 1px solid #6159a9;
+    }
+
+    input[aria-invalid='true'] + label {
+      top: 16px;
+      left: 0;
+      padding-right: 0;
+      color: rgba(17, 6, 74, 0.5);
+    }
+
+    label {
+      font-size: 14px !important;
+      width: unset;
+    }
+
+    span {
+      &.error-message {
+        width: unset;
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "root": true,
+  "env": {
+    "node": true
+  },
+  "globals": {
+    "google": "readonly"
+  },
+  "extends": ["eslint:recommended", "@vue/airbnb", "prettier"],
+  "plugins": ["vue"],
+  "ignorePatterns": ["src/locales/calendar/am.js"],
+  "rules": {
+    // common rules
+    "no-trailing-spaces": [
+      "error",
+      {
+        "ignoreComments": true
+      }
+    ],
+    "no-underscore-dangle": ["warn", { "allow": ["_place"] }],
+    "no-console": [
+      "warn",
+      {
+        "allow": ["warn", "error", "table"]
+      }
+    ],
+    "space-before-blocks": ["error", "always"],
+    "no-param-reassign": [
+      "error",
+      {
+        "props": false
+      }
+    ],
+    "consistent-return": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "vue": "never"
+      }
+    ],
+    "import/no-dynamic-require": "off",
+    "import/no-cycle": "off",
+    "global-require": "off",
+    "no-plusplus": "off",
+    // vue.js rules
+    "vue/attributes-order": [
+      "error",
+      {
+        "order": [
+          "DEFINITION",
+          "LIST_RENDERING",
+          "CONDITIONALS",
+          "RENDER_MODIFIERS",
+          "GLOBAL",
+          ["UNIQUE", "SLOT"],
+          "TWO_WAY_BINDING",
+          "OTHER_DIRECTIVES",
+          "OTHER_ATTR",
+          "EVENTS",
+          "CONTENT"
+        ],
+        "alphabetical": false
+      }
+    ],
+    "vue/multi-word-component-names": "warn",
+    "vue/html-closing-bracket-newline": ["error"],
+    "vue/no-v-text-v-html-on-component": "off",
+    "vuejs-accessibility/click-events-have-key-events": "off",
+    "vuejs-accessibility/label-has-for": "warn"
+  }
+}

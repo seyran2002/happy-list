@@ -1,0 +1,30 @@
+@media (max-width: 760px) {
+  .block-text {
+    &.my-55 {
+      margin: 16px 0;
+    }
+  }
+  .sub-title {
+    &.mt-12 {
+      margin-top: 16px;
+    }
+  }
+  .main-text-block {
+    width: 100% !important;
+    text-align: center;
+    h1,
+    h4,
+    h5,
+    p {
+      text-align: center !important;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .main-text-block {
+    .btn {
+      width: 100%;
+    }
+  }
+}

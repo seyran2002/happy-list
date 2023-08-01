@@ -1,0 +1,91 @@
+.guests-list {
+  flex: 1;
+  min-height: 324px;
+  max-height: 425px;
+  padding: 18px 24px 0 0;
+  list-style-type: none;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #e0e0e0;
+  }
+
+  @media screen and (max-width: 767px) {
+    min-height: 0;
+    max-height: none;
+    margin-bottom: 20px;
+    padding-right: 0;
+  }
+}
+
+.guests-go-back-btn.atomLink {
+  display: none;
+  max-width: 315px;
+  width: 100%;
+  margin: 20px auto 0;
+  padding: 13px 0;
+  border: 1px solid #bdbdbd;
+  border-radius: 8px;
+
+  @media screen and (max-width: 950px) {
+    display: block;
+  }
+}
+
+.base-modal {
+  .modal {
+    .form-base {
+      overflow: visible;
+    }
+  }
+}
+
+.event-content-guests {
+  .event-content-header {
+    .hg-event-description-content {
+      margin-top: 10px;
+
+      .hg-hide-show-content {
+        width: 100%;
+        text-align: right;
+
+        .hg-hide-show {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .hg-send-invitations-btn-content {
+    .hg-send-invitations-btn {
+      width: unset;
+      padding: 6px 10px;
+      border-radius: 6px;
+
+      @media screen and (min-width: 1100px) {
+        margin-top: -22px;
+      }
+      @media screen and (max-width: 1100px) {
+        float: left;
+        margin-top: 10px;
+      }
+      @media screen and (max-width: 951px) {
+        float: unset;
+        margin-top: -22px;
+      }
+      @media screen and (max-width: 767px) {
+        float: left;
+      }
+    }
+  }
+}

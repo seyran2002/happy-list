@@ -1,0 +1,102 @@
+@import '../vars/colors.scss';
+@import '../mixins/small-add-btn.scss';
+
+.my-event-content-wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+
+  @media screen and (max-width: 767px) {
+    margin-top: 24px;
+  }
+}
+
+.my-event-content-btns {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.my-event-content-btn {
+  max-width: 152px;
+  width: 100%;
+  padding: 8px 21px;
+  transition: transform 0.3s ease-in-out;
+
+  &.active {
+    box-shadow: 0.5px 0.5px 10px #9457eb;
+    transform: scale(1.2);
+  }
+}
+
+.my-event-content {
+  padding: 24px 24px 24px 32px;
+  background: rgba(#f2f2f2, 0.4);
+  border-radius: 12px;
+  height: 100%;
+
+  .event-content-header {
+    width: 100%;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e0e0e0;
+
+    @media screen and (max-width: 767px) {
+      padding-bottom: 24px;
+    }
+  }
+
+  .event-content-creator-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .event-content-subtitle {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .event-content-time-place {
+    display: flex;
+    gap: 20px;
+
+    .subtitle {
+      margin-bottom: 6px;
+      font-size: 12px;
+    }
+  }
+
+  .event-content-add-guest-btn {
+    @include small-add-btn;
+  }
+
+  .event-content-guests-gifts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+
+    &.no-grid-columns {
+      @media screen and (max-width: 950px) {
+        grid-template-columns: 100%;
+      }
+    }
+  }
+
+  .event-content-guests {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-right: 14px;
+
+    @media screen and (max-width: 767px) {
+      padding-right: 0;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 0;
+    background: none;
+  }
+}

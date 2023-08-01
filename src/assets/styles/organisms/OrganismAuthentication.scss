@@ -1,0 +1,29 @@
+@import '../vars/colors.scss';
+@import '../vars/fonts.scss';
+@import '../common/inputs.scss';
+@import '../common/forms.scss';
+
+.authentication-tabs {
+  margin-bottom: 40px;
+}
+
+.authentication-tabs-btn {
+  all: unset;
+  color: $text-violet;
+  font-size: $font-size-22;
+  font-weight: $semiBold;
+  line-height: 1.25;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+
+  & + .authentication-tabs-btn {
+    margin-left: 36px;
+  }
+
+  &.active {
+    font-size: $font-size-32;
+    font-weight: $bold;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,50 @@
+.add-present-img-btn-content {
+  margin-bottom: 44px;
+
+  .hg-image-upload-btn-content {
+    width: 100%;
+    display: flex;
+    .add-present-img-btn {
+      width: unset;
+      height: 44px;
+      max-width: 100%;
+      border-radius: 16px;
+      line-height: 18px;
+
+      &.text-14 {
+        font-size: 14px;
+      }
+    }
+
+    .cancel-img-btn {
+      width: unset;
+      height: 44px;
+      border-radius: 16px;
+      line-height: 18px;
+      margin-left: 10px;
+
+      &.text-14 {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .not-empty {
+    .hg-image-upload-btn-content {
+      .add-present-img-btn {
+        width: unset;
+      }
+    }
+  }
+
+  .hg-present-img {
+    margin-top: 20px;
+
+    img {
+      width: 100%;
+      height: auto;
+      max-width: 222px;
+      border-radius: 16px;
+    }
+  }
+}

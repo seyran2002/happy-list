@@ -1,0 +1,118 @@
+@import '../vars/colors.scss';
+
+.guests-list {
+  margin-top: 40px;
+
+  &.hg-selection-list {
+    min-height: unset;
+    padding-right: 0;
+  }
+}
+
+.hg-active-guests-full-list {
+  .hg-guests-full-list {
+    z-index: 10;
+    position: relative;
+    padding: 150px 50px 50px 50px;
+    background-color: $bg-white;
+    min-height: calc(100vh - 170px);
+
+    @media (min-width: 760px) {
+      width: 400px;
+    }
+
+    @media (min-width: 900px) {
+      width: calc(50% - 90px);
+      max-width: 400px;
+    }
+
+    &:after {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 53px;
+      content: '';
+      position: absolute;
+      opacity: 0.17;
+      background: linear-gradient(89.97deg, #000000 -116.7%, rgba(84, 84, 84, 0) 50%);
+    }
+
+    .guests-list {
+      padding-right: 65px;
+      max-height: 955px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding-top: 4px;
+      margin-top: 0;
+
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+      &::-webkit-scrollbar:horizontal {
+        position: absolute;
+        height: 5px;
+      }
+      &::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: transparentize(#ccc, 0.3);
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: linear-gradient(305.15deg, #5d5aa9 -9.14%, #8b5aa9 100%);
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    .back-btn {
+      width: unset;
+      padding: 16px 40px;
+      display: none;
+    }
+
+    @media (max-width: 902px) {
+      left: 0;
+      right: 0;
+      z-index: 0;
+      padding: 120px 50px 50px 50px;
+
+      &:after {
+        display: none;
+      }
+
+      .guests-list {
+        overflow-y: auto;
+        padding-right: 0;
+        margin-bottom: 25px;
+        height: calc(100vh - 250px);
+
+        @media (max-width: 760px) {
+          height: calc(100vh - 200px);
+        }
+      }
+
+      .back-btn {
+        display: inline-block;
+      }
+    }
+
+    @media (max-width: 760px) {
+      top: 100px;
+      padding: 0 32px;
+      position: absolute;
+    }
+
+    @media (max-width: 400px) {
+      top: 0;
+      width: 100%;
+      padding: 0 !important;
+
+      .guests-list {
+        padding-right: 0;
+      }
+
+      .back-btn {
+        width: 100%;
+      }
+    }
+  }
+}

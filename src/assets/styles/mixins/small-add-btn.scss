@@ -1,0 +1,15 @@
+@mixin small-add-btn {
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  margin-right: 24px;
+  padding: 0;
+  border-radius: 4px;
+  background-color: $text-violet;
+
+  @media screen and (max-width: 767px) {
+    margin-left: auto;
+    margin-right: 0;
+  }
+}

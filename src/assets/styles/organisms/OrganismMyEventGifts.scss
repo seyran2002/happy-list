@@ -1,0 +1,62 @@
+@import '../vars/colors.scss';
+@import '../mixins/small-add-btn.scss';
+
+.event-content-gifts {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.event-content-add-gift-btn {
+  @include small-add-btn;
+
+  @media screen and (max-width: 950px) {
+    margin-right: 0;
+  }
+}
+
+.gifts-list {
+  flex: 1;
+  height: 100%;
+  padding: 18px 10px 0 10px;
+  border-left: 1px solid #e0e0e0;
+  list-style-type: none;
+  overflow-y: auto;
+  box-sizing: border-box;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #e0e0e0;
+  }
+
+  @media screen and (max-width: 950px) {
+    min-height: 0;
+    max-height: none;
+    padding-left: 0;
+    padding-right: 0;
+    border-left: none;
+    overflow: unset;
+  }
+}
+
+.hg-share-gift-modal {
+  header {
+    display: flex;
+
+    .modal-close-btn {
+    }
+  }
+}
+
+.hg-empty-guests-content {
+  padding-top: 40px;
+}

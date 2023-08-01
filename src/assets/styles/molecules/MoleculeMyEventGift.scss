@@ -1,0 +1,152 @@
+@import '../vars/colors.scss';
+@import '../mixins/link-icon.scss';
+
+@mixin gift-name-description {
+  display: inline-block;
+  max-width: 220px;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.gifts-item-wrapper {
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 6px;
+
+  &.blinking {
+    border-radius: 16px;
+    border: 2px solid #5d5aa9;
+    animation-name: blinking;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes blinking {
+    50% {
+      border-color: transparent;
+    }
+  }
+  @media (max-width: 400px) {
+    padding: 10px 0px;
+  }
+}
+
+.gifts-item {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 52px 1fr;
+  gap: 12px;
+  @media (max-width: 372px) {
+    gap: 3px;
+  }
+}
+
+.gifts-item-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.gifts-item-name {
+  @include gift-name-description;
+  font-size: 13px;
+}
+
+.gifts-item-content {
+  color: inherit;
+  text-decoration: none;
+}
+
+.gifts-item-image-wrapper {
+  position: relative;
+  height: 52px;
+  border: 1px solid #e0e0e0;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.gifts-item-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.gifts-item-link-icon {
+  @include link-icon;
+}
+
+.gifts-item-info-bottom {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.gifts-item-guests {
+  display: flex;
+}
+
+.gifts-item-guests-plus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  margin-left: 6px;
+  font-size: 12px;
+  line-height: 15px;
+  background: #fff;
+  border: 1.5px solid #fff;
+  border-radius: 50%;
+}
+
+.gifts-item-description {
+  @include gift-name-description;
+  font-size: 12px;
+  line-height: 15px;
+  opacity: 0.6;
+}
+
+.gifts-item-guests {
+  display: flex;
+  align-items: center;
+  //flex-direction: row-reverse;
+
+  .guests-avatar {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border: 1.5px solid #fff;
+    border-radius: 50%;
+  }
+}
+
+.gifts-item-remove-btn {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background: none;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.gift-modal.base-modal {
+  .modal {
+    max-width: 456px;
+
+    @media screen and (max-width: 767px) {
+      max-width: 343px;
+
+      .modal-body {
+        padding: 0;
+      }
+    }
+  }
+}

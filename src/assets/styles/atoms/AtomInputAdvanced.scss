@@ -1,0 +1,70 @@
+fieldset {
+  &.hg-custom-input-content {
+    input {
+      &.hg-custom-input {
+        border: 1px solid #6159a9;
+        border-radius: 16px;
+        padding-left: 4px !important;
+        padding-right: 4px !important;
+
+        &.text-11 {
+          font-size: 11px;
+        }
+
+        &.border-radius-10 {
+          border-radius: 10px;
+        }
+      }
+    }
+
+    .hg-icons-content {
+      top: 8px;
+      right: 0;
+      z-index: 10;
+      position: absolute;
+
+      img {
+        color: #595959;
+
+        &.copy-icon {
+          cursor: pointer;
+        }
+
+        &:hover {
+          transform: scale(1.1);
+          transition: ease-in 0.35s;
+        }
+      }
+    }
+
+    &.input-with-icons {
+      .hg-custom-input {
+        box-sizing: border-box;
+
+        &.append-icons-left {
+          padding-left: 50px !important;
+        }
+
+        &.append-icons-right {
+          padding-right: 50px !important;
+        }
+      }
+
+      .hg-icons-content {
+        &.append-icons-left {
+          left: 5px;
+          img {
+            margin-right: 5px;
+          }
+        }
+
+        &.append-icons-right {
+          right: 5px;
+          img {
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}

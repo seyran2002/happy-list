@@ -1,0 +1,20 @@
+fieldset {
+  &.hg-textarea-content {
+    padding-top: 12px !important;
+
+    &.form-label-group {
+      textarea {
+        width: 100%;
+        color: #11064a;
+        font-size: 14px;
+        padding: 0 !important;
+        border: 0;
+        border-bottom: 1px solid #6159a9 !important;
+      }
+
+      label {
+        z-index: 9;
+      }
+    }
+  }
+}

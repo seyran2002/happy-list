@@ -1,0 +1,32 @@
+.new-add-guest-form {
+  .next-btn {
+    padding: 16px 65px;
+    border: none;
+    border-radius: 16px;
+    outline: none;
+    cursor: pointer;
+    margin-top: 50px;
+  }
+
+  .add-guest-btn {
+    width: unset;
+    padding: 16px 16px;
+    line-height: 18px;
+    margin-top: 8px;
+    @media (max-width: 393px) {
+      padding: 16px 10px;
+    }
+  }
+
+  .add-me-btn {
+    width: unset;
+    padding: 16px 16px;
+    border-radius: 16px;
+    margin-left: 10px;
+    line-height: 18px;
+    margin-top: 8px;
+    @media (max-width: 393px) {
+      padding: 16px 10px;
+    }
+  }
+}

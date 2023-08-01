@@ -1,0 +1,41 @@
+.head-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 80px 0 40px 0;
+  background: rgba(21, 18, 95, 0.6);
+  backdrop-filter: blur(50px);
+  box-sizing: border-box;
+
+  .size {
+    height: 100% !important;
+    overflow: auto !important;
+  }
+
+  .link.router-link-exact-active:after,
+  .link.router-link-active:after {
+    background-color: #fff;
+  }
+
+  .btn-white {
+    margin: 0 auto;
+    width: calc(100% - 64px);
+    max-width: 400px;
+    z-index: 10;
+
+    & + .btn-white {
+      margin-top: 10px;
+    }
+  }
+}
+
+button.close-menu {
+  padding: 0;
+  background: none;
+  border: none;
+  position: absolute;
+  right: 32px;
+  top: 36px;
+  cursor: pointer;
+}

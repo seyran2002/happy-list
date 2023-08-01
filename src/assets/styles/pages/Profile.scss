@@ -1,0 +1,58 @@
+@import './../vars/colors.scss';
+
+.profile-page {
+  background: #fafafa;
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+  .profile-calendar {
+    width: 70%;
+    padding: 0 45px;
+    margin-top: 170px;
+    margin-bottom: 40px;
+  }
+
+  .remove-fbdata-btn {
+    padding: 0;
+    background: none;
+  }
+
+  .profile-data {
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 170px;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+    width: 30%;
+    background: $bg-white;
+  }
+}
+
+@media (max-width: 1100px) {
+  .profile-page {
+    .profile-calendar {
+      padding-right: 0;
+      padding-left: 32px;
+    }
+    .profile-data {
+      padding-right: 32px;
+      padding-left: 0px;
+    }
+  }
+}
+
+@media (max-width: 834px) {
+  .profile-page {
+    display: block;
+    background: #fff;
+    .profile-calendar {
+      margin-top: 0px;
+      width: 100%;
+      padding: 0;
+    }
+    .profile-data {
+      padding-top: 102px;
+      width: 100%;
+    }
+  }
+}

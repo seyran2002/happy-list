@@ -1,0 +1,39 @@
+@import '../vars/fonts.scss';
+@import '../vars/colors.scss';
+
+.event-dropdown {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  min-width: 142px;
+  padding: 8px 8px 15px 12px;
+  background: $bg-white;
+  box-shadow: 0.5px 0.5px 10px #9457eb;
+  border-radius: 8px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.event-dropdown-close-btn {
+  width: 14px;
+  height: 14px;
+  margin-left: auto;
+  padding: 0;
+  background: none;
+}
+
+.event-dropdown-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  font-size: $font-size-12;
+
+  & + .event-dropdown-btn {
+    margin-top: 14px;
+  }
+}

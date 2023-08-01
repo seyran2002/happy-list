@@ -1,0 +1,110 @@
+.guest-item {
+  display: flex;
+  border: none;
+  border-radius: 12px;
+  margin-bottom: 9px;
+  width: 274px;
+  max-width: 100%;
+  padding: 12px 22px 12px 16px;
+
+  &:hover {
+    background-color: #f2f2f2 !important;
+  }
+
+  @media (max-width: 400px) {
+    width: unset;
+  }
+
+  .guest-avatar {
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  .hg-guest-details {
+    padding-left: 12px;
+    flex: 1 1 70%;
+    max-width: calc(100% - 120px);
+
+    .hg-guest-name {
+      line-height: 16px;
+      color: #11064a;
+      margin-bottom: 4px;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .hg-guest-contact {
+      line-height: 15px;
+      color: rgba(17, 6, 74, 0.6);
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .hg-hide-show-content {
+    display: flex;
+    padding-left: 12px;
+    align-items: center;
+
+    .hg-guest-lng-content {
+      padding-left: 3px;
+      padding-right: 3px;
+      height: 24px;
+      margin-right: 16px;
+      border-radius: 4px;
+      background-color: #c4c4c4;
+      text-align: center;
+      align-items: center;
+      display: grid;
+
+      span {
+        padding: 0;
+        background-color: transparent;
+        color: #fff;
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 600;
+        vertical-align: sub;
+        display: contents;
+      }
+    }
+
+    .hg-delete-content {
+      height: 24px;
+
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &.hg-selection-list-item {
+    cursor: pointer;
+    padding: 12px 20px 8px 16px;
+
+    .hg-guest-details {
+      max-width: 100%;
+      padding-top: 2px;
+      .hg-guest-name {
+        height: 18px;
+      }
+    }
+
+    &.hg-chosen-item {
+      color: white;
+      background: linear-gradient(305.15deg, #5d5aa9 -9.14%, #8b5aa9 100%);
+
+      .hg-guest-details {
+        .hg-guest-name,
+        .hg-guest-contact {
+          color: white;
+        }
+      }
+    }
+  }
+}

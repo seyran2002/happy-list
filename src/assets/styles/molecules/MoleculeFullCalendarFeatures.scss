@@ -1,0 +1,51 @@
+.main-calendar-feature {
+  position: relative;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+}
+.calendar-feature {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 27px;
+  button {
+    padding: 0;
+  }
+}
+.round-link {
+  z-index: 20;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+
+@media (max-width: 834px) {
+  .main-calendar-feature {
+    padding: 0;
+    .round-link {
+      right: 10px;
+      bottom: 10px;
+    }
+  }
+  .calendar-feature {
+    top: 6px;
+  }
+}
+@media (max-width: 530px) {
+  .main-calendar-feature {
+    .fc-toolbar-title {
+      display: none;
+    }
+    .fc-prev-button {
+      display: none;
+    }
+    .fc-next-button {
+      display: none;
+    }
+    .round-link {
+      right: 3px;
+      bottom: 3px;
+    }
+  }
+}

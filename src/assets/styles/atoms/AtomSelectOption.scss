@@ -1,0 +1,57 @@
+.select-option {
+  button {
+    background: none;
+    border: none;
+  }
+
+  .select-button {
+    position: relative;
+  }
+
+  .options {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    background: white;
+    box-shadow: 0 5px 6px 0 rgb(3 83 220 / 47%);
+    z-index: 1000;
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 0.25rem 1.5rem;
+      color: #212529;
+      text-align: left;
+      white-space: nowrap;
+      border-radius: 0;
+
+      &:hover {
+        background: linear-gradient(305.15deg, #5d5aa9 -9.14%, #8b5aa9 100%);
+
+        p,
+        small {
+          color: #fff !important;
+        }
+      }
+
+      &.active-option {
+        background: linear-gradient(305.15deg, #5d5aa9 -9.14%, #8b5aa9 100%);
+
+        p,
+        small {
+          color: #fff !important;
+        }
+      }
+
+      small {
+        color: #595959;
+      }
+    }
+  }
+
+  .select-arrow {
+    width: 30px;
+  }
+}

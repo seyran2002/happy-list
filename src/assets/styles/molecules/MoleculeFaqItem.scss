@@ -1,0 +1,119 @@
+.faq-item {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  grid-column-gap: 110px;
+  margin-bottom: 188px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 88px;
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+}
+
+.faq-item .icon-wrapper {
+  width: 100%;
+  height: 280px;
+
+  .icon-content .app-img__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &--happyPerson {
+    .icon-content {
+      transform: translateX(-8%) scale(1.1);
+
+      @media screen and (max-width: 767px) {
+        transform: translateX(-10%) scale(1.2);
+      }
+    }
+  }
+
+  &--sleighGift {
+    .icon-content {
+      overflow: visible;
+      transform: translate(4%, -10%) scale(1.4);
+
+      @media screen and (max-width: 767px) {
+        transform: translate(2%, 0) scale(1.6);
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-right: auto;
+    margin-bottom: 40px;
+    margin-left: auto;
+    max-width: 280px;
+
+    &--happyPerson {
+      margin-bottom: 80px;
+    }
+
+    &--sleighGift {
+      margin-top: 80px;
+    }
+  }
+}
+
+.faq-item-title {
+  margin-bottom: 52px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 36px;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+  }
+}
+
+.faq-item-content {
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+}
+
+.faq-item-details {
+  &--active {
+    margin-bottom: 52px;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 36px;
+    }
+  }
+
+  p + p {
+    margin-top: 32px;
+  }
+
+  @media screen and (max-width: 767px) {
+    text-align: left;
+  }
+}
+
+.faq-item-btn {
+  display: inline-block;
+  margin-top: 8px;
+
+  @media screen and (max-width: 767px) {
+    max-width: 375px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.faq-details-enter-active,
+.faq-details-leave-active {
+  will-change: height, opacity;
+  transition: height 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+}
+
+.faq-details-enter,
+.faq-details-leave-to {
+  height: 0 !important;
+  opacity: 0;
+}

@@ -1,0 +1,8 @@
+user-agent: *
+
+Allow: /faq
+Allow: /create-event
+
+Disallow: /privacy/
+
+Sitemap: https://lrnkey.com/sitemap.xml/

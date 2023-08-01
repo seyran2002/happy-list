@@ -1,0 +1,236 @@
+@import '../mixins/btn-mixin.scss';
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  background-color: transparent !important;
+  background-image: none !important;
+  color: rgb(0, 0, 0) !important;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px white inset;
+}
+
+fieldset {
+  position: relative;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  z-index: 2;
+}
+
+input[type='text'],
+input[type='password'],
+.sel {
+  display: block;
+  width: 100%;
+  height: 3em;
+  padding: 16px 38px 16px 8px;
+  border: 0;
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  background: inherit;
+  outline: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  transition: all 0.2s ease-in-out;
+}
+
+fieldset input {
+  position: relative;
+  padding-right: 30px !important;
+  z-index: 10;
+}
+
+.sel {
+  border-bottom: 2px solid #ddd;
+  padding: 0.375rem 0.75rem;
+}
+
+.sel:focus {
+  border-color: transparent;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.selOk {
+  border-bottom: 2px solid #3054d7;
+}
+
+.form-label input,
+.form-label textarea {
+  border-bottom: 2px solid #ddd;
+}
+
+.form-css-label label {
+  position: absolute;
+  z-index: -1;
+  top: 16px;
+  left: 8px;
+  width: 100%;
+  padding-right: 30px;
+  color: #7b7b7b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  transition: all 0.2s ease-in-out;
+}
+
+.form-css-label input[data-empty='false'],
+.form-css-label input:valid,
+.form-css-label input:focus,
+.form-css-label textarea[data-empty='false'],
+.form-css-label textarea:valid,
+.form-css-label textarea:focus {
+  padding: 22px 8px 10px;
+}
+
+.form-css-label input:focus,
+.form-css-label textarea:focus {
+  outline: 0;
+}
+
+.not-empty input[data-empty='false'],
+.not-empty input:valid,
+.not-empty input:focus,
+.not-empty textarea[data-empty='false'],
+.not-empty textarea:valid,
+.not-empty textarea:focus {
+  border-bottom: 2px solid #3054d7;
+}
+
+.not-empty input[data-empty='false'] + label,
+.not-empty input:valid + label,
+.form-css-label input:focus + label,
+.not-empty textarea[data-empty='false'] + label,
+.not-empty textarea:valid + label,
+.form-css-label textarea:focus + label {
+  color: #3054d7;
+  font-size: 12px;
+  -webkit-transform: translate3d(0, -20px, 0);
+  transform: translate3d(0, -20px, 0);
+}
+
+.not-empty input[data-empty='false'] + label + .checkIcon,
+.not-empty input:valid + label + .checkIcon,
+.not-empty input:focus + label + .checkIcon,
+.not-empty textarea[data-empty='false'] + label + .checkIcon,
+.not-empty textarea:valid + label + .checkIcon,
+.not-empty textarea:focus + label + .checkIcon,
+.selectOk {
+  opacity: 1;
+  transform: rotate(1440deg);
+}
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+    &:checked ~ .checkbox-container-checkmark {
+      background-color: $text-violet;
+
+      &:after {
+        display: block;
+      }
+    }
+  }
+
+  .checkbox-container-checkmark:after {
+    content: '';
+    position: absolute;
+    display: none;
+  }
+
+  &-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 13px;
+    width: 13px;
+    border-radius: 4px;
+    background-color: $text-violet;
+
+    &:after {
+      left: 26%;
+      top: 45%;
+      width: 5px;
+      height: 9px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg) translate(-50%, -50%);
+    }
+  }
+
+  &-error-message {
+    position: absolute;
+    left: 0;
+    top: 16px;
+  }
+}
+
+.error-style input[aria-invalid='true'] {
+  border-bottom: 2px solid #e01812;
+}
+
+.error-style input[aria-invalid='true'] + label {
+  color: #e01812;
+}
+
+.error-style input[aria-invalid='true'] + label + .checkIcon {
+  opacity: 1;
+  transform: rotate(2970deg);
+  color: #e01812;
+}
+
+.error-message {
+  color: $base-red;
+  position: relative;
+  top: -6px;
+  display: block;
+  padding-top: 10px !important;
+  width: 340px;
+  font-size: 10px;
+  line-height: 13px;
+}
+
+.v-btn-social {
+  @include btn-mixin;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 144px;
+  height: 44px;
+  padding: 0 20px;
+  border-radius: 12px;
+}
+
+.v-btn-wide {
+  @include btn-mixin;
+
+  width: 100%;
+  height: 52px;
+  background: $btn-gradient-color;
+  border-radius: 16px;
+}

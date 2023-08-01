@@ -1,0 +1,45 @@
+.time-picker-input-container {
+  .time-picker-input {
+    border-bottom: 1px solid #6159a9;
+    position: relative;
+    padding: 0 !important;
+    color: #11064a;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: normal;
+    font-style: normal;
+    z-index: 0;
+
+    & + label {
+      left: 8px;
+      padding-right: 0;
+      top: 16px;
+      font-size: 12px;
+      line-height: 15px;
+      font-weight: normal;
+      font-style: normal;
+    }
+  }
+
+  .trash__time {
+    position: absolute;
+    top: 17px;
+    right: 0;
+    cursor: pointer;
+  }
+
+  input[aria-invalid='false'] + label {
+    left: 8px;
+    padding-right: 0;
+    top: 16px;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: normal;
+    font-style: normal;
+    margin-bottom: 2px;
+  }
+}
+
+.error-message {
+  padding: 0;
+}

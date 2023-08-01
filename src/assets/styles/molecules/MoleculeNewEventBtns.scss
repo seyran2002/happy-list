@@ -1,0 +1,26 @@
+.hg-new-event-action-btns {
+  margin-top: 40px;
+
+  .next-btn {
+    width: unset;
+    padding: 16px 40px;
+    margin-bottom: 50px;
+    line-height: 18px;
+  }
+
+  .back-btn-sm {
+    width: unset;
+    padding: 17px 16px 15px;
+    margin-right: 12px;
+
+    img {
+      height: 15px;
+    }
+  }
+
+  .cancel-btn-sm {
+    width: unset;
+    padding: 16px 16px;
+    margin-right: 12px;
+  }
+}

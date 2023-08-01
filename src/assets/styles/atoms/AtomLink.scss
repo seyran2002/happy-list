@@ -1,0 +1,95 @@
+@import '../../../assets/styles/vars/fonts.scss';
+@import '../../../assets/styles/vars/colors.scss';
+@import '../../../assets/styles/mixins/link-underline.scss';
+
+.atomLink {
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.header-links {
+  .atomLink {
+    &.ml-40 {
+      margin-left: 40px;
+    }
+  }
+}
+
+.link {
+  position: relative;
+
+  &.router-link-exact-active:after,
+  &.router-link-active:after {
+    @include link-underline;
+  }
+}
+
+.link:hover:after {
+  @include link-underline(0.2s);
+}
+
+.btn,
+.btn-white,
+.btn-small {
+  transition: all 0.35s ease-in;
+}
+
+.btn {
+  border: none;
+  width: 192px;
+  padding: 17px 0;
+  text-align: center;
+  border-radius: 16px;
+  outline: none;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      box-shadow: 0.5px 0.5px 10px #9457eb;
+      transform: scale(1.1);
+    }
+  }
+}
+
+.btn-small {
+  border: none;
+  width: 110px;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 10px;
+  outline: none;
+}
+
+.btn-small:hover {
+  transition: ease-in 0.35s;
+  transform: scale(1.1);
+  box-shadow: 0.5px 0.5px 10px #9457eb;
+}
+
+.btn-white {
+  width: 192px;
+  text-align: center;
+  padding: 17px 0;
+  border: 1px solid #fff;
+  border-radius: 16px;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0.5px 0.5px 10px #fff;
+    }
+  }
+}
+
+.header-links {
+  .btn {
+    padding: 11px 20px;
+    width: unset;
+    border-radius: 12px;
+    border: none;
+  }
+
+  .btn:hover {
+    transition: unset;
+    transform: scale(1);
+  }
+}

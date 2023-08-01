@@ -1,0 +1,14 @@
+.boxes-title {
+  text-align: center;
+}
+.boxes-main {
+  margin-top: 56px;
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (max-width: 800px) {
+  .boxes-main {
+    display: block;
+  }
+}

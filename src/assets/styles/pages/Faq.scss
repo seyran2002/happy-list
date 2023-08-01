@@ -1,0 +1,9 @@
+.faq-title {
+  margin-bottom: 116px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 58px;
+    font-size: 40px;
+    line-height: 50px;
+  }
+}

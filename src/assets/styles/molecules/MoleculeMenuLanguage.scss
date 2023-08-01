@@ -1,0 +1,33 @@
+@import '../mixins/link-underline.scss';
+
+.menu-main-language {
+  .text-left {
+    text-align: left;
+  }
+
+  button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+}
+
+.menu-languages {
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    position: relative;
+
+    &.active::after {
+      @include link-underline;
+      width: 100%;
+      background-color: $bg-white;
+    }
+  }
+}
+
+.menu-languages-btn {
+  all: unset;
+}

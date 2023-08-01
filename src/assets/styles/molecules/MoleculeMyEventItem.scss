@@ -1,0 +1,139 @@
+@import '../vars/fonts.scss';
+@import '../vars/colors.scss';
+@import '../mixins/dropdown-btn-mixin.scss';
+@import '../common/event-dropdown.scss';
+
+.my-event-item-wrapper {
+  & + .my-event-item-wrapper {
+    margin-top: 8px;
+  }
+  .blinking {
+    border: 2px solid #5d5aa9;
+    animation-name: blinking;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes blinking {
+    50% {
+      border-color: transparent;
+    }
+  }
+}
+
+.my-event-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px 12px 12px;
+  text-decoration: none;
+  background: rgba(#f2f2f2, 0.4);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.35s ease-in-out;
+
+  & + & {
+    margin-top: 8px;
+  }
+
+  &.router-link-exact-active {
+    background: $btn-gradient-color;
+
+    .event-info > * {
+      color: $text-white-color;
+    }
+
+    svg path {
+      fill: $text-white-color;
+    }
+
+    @media screen and (max-width: 950px) {
+      background: none;
+
+      .event-info > * {
+        color: $text-main-color;
+      }
+
+      svg path {
+        fill: #828282;
+      }
+    }
+  }
+
+  .event-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .event-host-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .event-info > * {
+    color: $text-main-color;
+  }
+
+  .event-date {
+    font-size: $font-size-12;
+    opacity: 0.5;
+
+    @media screen and (max-width: 950px) {
+      margin-bottom: 12px;
+      color: $text-main-color;
+      font-size: $font-size-20;
+      font-weight: $bold;
+      opacity: 1;
+    }
+  }
+
+  .event-date-day {
+    @media screen and (max-width: 950px) {
+      font-weight: $regular;
+    }
+  }
+
+  .event-name {
+    display: inline-block;
+    width: 200px;
+    font-size: $font-size-16;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+    @media screen and (max-width: 950px) {
+      width: auto;
+      text-overflow: unset;
+      white-space: unset;
+      overflow: unset;
+    }
+  }
+
+  .event-dropdown-toggle-btn {
+    @include dropdown-btn-mixin;
+  }
+
+  @media screen and (max-width: 950px) {
+    padding: 24px 0;
+    background: none;
+    border-radius: 0;
+    border-bottom: 1px solid #e0e0e0;
+
+    &.active {
+      background: inherit;
+
+      .event-content > * {
+        color: inherit;
+      }
+
+      svg path {
+        fill: #828282;
+      }
+    }
+  }
+}
